@@ -1,5 +1,5 @@
 # 我的mac工具集
----
+
 
 - 输入法
  + 搜狗输入法
@@ -60,4 +60,18 @@
  + PopClip
  + 截图
  + 我的印象笔记
----
+- 
+
+##其他
+###安装homebrew
+```code
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+###安装node
+```code
+brew install node
+```
+###配置git，生成新的 ssh 公钥,复制~/.ssh/.pub到管理后台
+```code
+ssh-keygen -t rsa -C "{your_email@email.com}"
+```
