@@ -627,12 +627,12 @@ jQuery.fn.scrollTo = function(speed){
 		
 ```js
 
-	var Dialog = require('./tool/dialog.js');
-	Dialog.show();
-	Dialog.alert();
-	Dialog.hide();
-	Dialog.tip();
-	//四个方法
+var Dialog = require('./tool/dialog.js');
+  Dialog.show();
+  Dialog.alert();
+  Dialog.hide();
+  Dialog.tip();
+//四个方法
 	
 ```
 
@@ -642,18 +642,18 @@ jQuery.fn.scrollTo = function(speed){
 
 ```js
 
-	var flash = $('.放置容器 iframe, .放置容器 object');  //获取PPT元素
-	if (isMobile && flash.length) {
-	    var js = 'http://assets.dxycdn.com/templates/core/third-party/mobile-ppt/mobile-ppt.min.js';
-	    $.getScript(js, function () {
-	        MobilePPT.init('biz', {
-	            flash: flash,
-	            dataUrlBuilder: function (nid) {
-	                return 'http://www.dxy.cn/topic/biz/ppt地址/' + nid + '/ps-data.js';  //有一个用node.js写的转换工具，需要向编辑人员要取PPT里面的所有图片，通过转换工具转换后将转换后的内容上传到FTP上，然后地址填写在这里即可
-	            }
-	        });
-	    });
-	}
+var flash = $('.放置容器 iframe, .放置容器 object');  //获取PPT元素
+if (isMobile && flash.length) {
+    var js = 'http://assets.dxycdn.com/templates/core/third-party/mobile-ppt/mobile-ppt.min.js';
+    $.getScript(js, function () {
+        MobilePPT.init('biz', {
+            flash: flash,
+            dataUrlBuilder: function (nid) {
+                return 'http://www.dxy.cn/topic/biz/ppt地址/' + nid + '/ps-data.js';  //有一个用node.js写的转换工具，需要向编辑人员要取PPT里面的所有图片，通过转换工具转换后将转换后的内容上传到FTP上，然后地址填写在这里即可
+            }
+        });
+    });
+}
 	
 ```
 ## <a name="即将离开丁香园提示框"></a>20.即将离开丁香园提示框
