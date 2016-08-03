@@ -15,6 +15,8 @@
  + JSONView
  + 划词翻译
  + 广告终结者
+ + 二维码（生成及识别）
+ + 惠惠购物助手
 - 办公软件
  + Microsoft Office
 - 下载
@@ -39,6 +41,9 @@
  + jQuery
  + jQueryDocs
  + SideBarEnhancements
+ + Babel
+ + ColorPicker
+ + WakaTime
 - 抓包
  + Charles
 - 切图
