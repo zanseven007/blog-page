@@ -21,6 +21,7 @@
 19. *[移动端PPT使用](#移动端PPT使用)*
 20. *[即将离开丁香园提示框](#即将离开丁香园提示框)*
 21. *[滚动条插件](#滚动条插件)*
+21. *[微信分享](#微信分享)*
 
 
 
@@ -142,62 +143,62 @@ var shareContainer = $('放置容器'); //给一个放置容器，其他事情�
 var Cascading = require('../lib/Cascading.full.js');
 
 //桌面版地址
-         var cascadeLocation = new Cascading.Desktop({
-             type: 'common',
-             data: 'dataLocation',
-             dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location.js?t=123',
-             container: 'cascading-location-container',
-             additionClass: 'test',
-             maxLevel: 3,
-             maxSelect: 1,
-             ieFallback: true,
-             panelNames: ['省份', '城市', '区县'],
-             defaultSelected: [['150000', '150600', '150621'], ['130000', '130200', '130281']],
-             confirmCallback: function(data){
-                 $('#edit-field-ge-city-und-0-value').next('.error').hide();
-                 $('#edit-field-ge-city-und-0-value').val(data.pathName[0].join('>'));
-                 if(isIE8 && $('#edit-field-ge-city-und-0-value').val()){
-                     $('#edit-field-ge-city-und-0-value').next('span').hide();
-                 }
-             }
-         });
-          $('#edit-field-ge-city-und-0-value').on('focus', function(e){
-             cascadeLocation.open();
-             this.blur();
-         });
-	//移动版地址
-        var cascadeLocationMobile = new Cascading.Mobile({
-           type: 'common',
-           data: 'dataLocation',
-           dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location.js?t=123',
-           container: 'cascading-location-mobile-container',
-           additionClass: 'test',
-           maxLevel: 3,
-           maxSelect: 1,
-           ieFallback: true,
-           panelNames: ['省份', '城市', '区县'],
-           defaultSelected: [['150000', '150600', '150621'], ['130000', '130200', '130281']],
-           confirmCallback: function(data){
-             $('#edit-field-ge-city-und-0-value').val(data.pathName[0].join('>'));
-             $('#edit-field-ge-city-und-0-value').next('.error').hide();
-           }
-         });
+var cascadeLocation = new Cascading.Desktop({
+   type: 'common',
+   data: 'dataLocation',
+   dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location.js?t=123',
+   container: 'cascading-location-container',
+   additionClass: 'test',
+   maxLevel: 3,
+   maxSelect: 1,
+   ieFallback: true,
+   panelNames: ['省份', '城市', '区县'],
+   defaultSelected: [['150000', '150600', '150621'], ['130000', '130200', '130281']],
+   confirmCallback: function(data){
+       $('#edit-field-ge-city-und-0-value').next('.error').hide();
+       $('#edit-field-ge-city-und-0-value').val(data.pathName[0].join('>'));
+       if(isIE8 && $('#edit-field-ge-city-und-0-value').val()){
+           $('#edit-field-ge-city-und-0-value').next('span').hide();
+       }
+   }
+});
+$('#edit-field-ge-city-und-0-value').on('focus', function(e){
+   cascadeLocation.open();
+   this.blur();
+});
+//移动版地址
+var cascadeLocationMobile = new Cascading.Mobile({
+   type: 'common',
+   data: 'dataLocation',
+   dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location.js?t=123',
+   container: 'cascading-location-mobile-container',
+   additionClass: 'test',
+   maxLevel: 3,
+   maxSelect: 1,
+   ieFallback: true,
+   panelNames: ['省份', '城市', '区县'],
+   defaultSelected: [['150000', '150600', '150621'], ['130000', '130200', '130281']],
+   confirmCallback: function(data){
+     $('#edit-field-ge-city-und-0-value').val(data.pathName[0].join('>'));
+     $('#edit-field-ge-city-und-0-value').next('.error').hide();
+   }
+ });
 
-          $('#edit-field-ge-city-und-0-value').on('focus', function(e){
-            cascadeLocationMobile.open();
-            this.blur();
+  $('#edit-field-ge-city-und-0-value').on('focus', function(e){
+    cascadeLocationMobile.open();
+    this.blur();
 
-          });
+  });
 
 ```
 
 ```html
       
-      //HTML内容
-      <div class="bottom-input-box">
-        <label for="">邮寄地址</label>
-        <input class="bottom-input" type="text" id="edit-field-ge-address-und-0-value" name="field_ge_address[und][0][value]">
-      </div>
+//HTML内容
+<div class="bottom-input-box">
+  <label for="">邮寄地址</label>
+  <input class="bottom-input" type="text" id="edit-field-ge-address-und-0-value" name="field_ge_address[und][0][value]">
+</div>
       
 ```
 ## <a name="医院选择控件"></a>7.医院选择控件
@@ -205,64 +206,64 @@ var Cascading = require('../lib/Cascading.full.js');
 ```js
 
 // 桌面版医院
-        var cascadeHospital = new Cascading.Desktop({
-             type: 'hospital',
-             data: 'dataLocation2Level',
-             dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location_2level.js?t=123',
-             panelNames: ['等级', '医院'],
-             panelWidth: ['30', '70'],
-             container: 'cascading-hospital-container',
-             defaultSelected: [['150000', '150600']],
-             ieFallback: true,
-             confirmCallback: function(data){
-                     $('#edit-field-ge-hospital-und-0-value').next('.error').hide();
-                 $('#edit-field-ge-hospital-und-0-value').val(data.name.join(','));
-                 if(isIE8 && $('#edit-field-ge-hospital-und-0-value').val()){
-                     $('#edit-field-ge-hospital-und-0-value').next('span').hide();
-                 }
-
-             }
-         });
-           $('#edit-field-ge-hospital-und-0-value').on('focus', function(e){
-              cascadeHospital.open();
-              this.blur();
-          });
-  //移动版医院
-         var cascadeHospitalMobile = new Cascading.Mobile({
-            type: 'hospital',
-            container: 'cascading-hospital-mobile-container',
-            additionClass: 'cascading-hospital-mobile-container-custom',
-            data: 'dataLocation2Level',
-            dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location_2level.js?t=123',
-            panelNames: ['等级', '医院'],
-            panelWidth: ['30', '70'],
-            defaultSelected: [['150000', '150600']],
-            ieFallback: true,
-            confirmCallback: function(data){
-             $('#edit-field-ge-hospital-und-0-value').val(data.name.join(','));
-              $('#edit-field-ge-hospital-und-0-value').next('.error').hide();
-
-             if(isIE8 && $('#edit-field-ge-hospital-und-0-value').val()){
-                 $('#edit-field-ge-hospital-und-0-value').next('span').hide();
-             }
-
+var cascadeHospital = new Cascading.Desktop({
+     type: 'hospital',
+     data: 'dataLocation2Level',
+     dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location_2level.js?t=123',
+     panelNames: ['等级', '医院'],
+     panelWidth: ['30', '70'],
+     container: 'cascading-hospital-container',
+     defaultSelected: [['150000', '150600']],
+     ieFallback: true,
+     confirmCallback: function(data){
+             $('#edit-field-ge-hospital-und-0-value').next('.error').hide();
+         $('#edit-field-ge-hospital-und-0-value').val(data.name.join(','));
+         if(isIE8 && $('#edit-field-ge-hospital-und-0-value').val()){
+             $('#edit-field-ge-hospital-und-0-value').next('span').hide();
          }
-     });
-           $('#edit-field-ge-hospital-und-0-value').on('click', function(e){
-              cascadeHospitalMobile.open();
-              this.blur();
-          });
+
+     }
+ });
+   $('#edit-field-ge-hospital-und-0-value').on('focus', function(e){
+      cascadeHospital.open();
+      this.blur();
+  });
+  //移动版医院
+var cascadeHospitalMobile = new Cascading.Mobile({
+  type: 'hospital',
+  container: 'cascading-hospital-mobile-container',
+  additionClass: 'cascading-hospital-mobile-container-custom',
+  data: 'dataLocation2Level',
+  dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/location_2level.js?t=123',
+  panelNames: ['等级', '医院'],
+  panelWidth: ['30', '70'],
+  defaultSelected: [['150000', '150600']],
+  ieFallback: true,
+  confirmCallback: function(data){
+   $('#edit-field-ge-hospital-und-0-value').val(data.name.join(','));
+    $('#edit-field-ge-hospital-und-0-value').next('.error').hide();
+
+   if(isIE8 && $('#edit-field-ge-hospital-und-0-value').val()){
+       $('#edit-field-ge-hospital-und-0-value').next('span').hide();
+   }
+
+}
+});
+ $('#edit-field-ge-hospital-und-0-value').on('click', function(e){
+    cascadeHospitalMobile.open();
+    this.blur();
+});
 
 ```
 
 ```html
             
-      //HTML内容
-      
-      <div class="bottom-input-box">
-        <label for="">医院</label>
-        <input class="bottom-input" type="text" id="edit-field-ge-hospital-und-0-value" name="field_ge_hospital[und][0][value]">
-      </div>   
+//HTML内容
+
+<div class="bottom-input-box">
+  <label for="">医院</label>
+  <input class="bottom-input" type="text" id="edit-field-ge-hospital-und-0-value" name="field_ge_hospital[und][0][value]">
+</div>   
 
 ```
 
@@ -271,132 +272,132 @@ var Cascading = require('../lib/Cascading.full.js');
 ```js
 
 // 桌面版科室
-           var cascadeDepartment = new Cascading.Desktop({
-             type: 'department',
-             data: 'dataDivision',
-             dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/division.js',
-             container: 'cascading-department-container',
-             onlyLast: true,
-             additionClass: 'cascading-department-container',
-             maxSelect: 1,
-             ieFallback: true,
-             panelNames: ['科室', '科室二级'],
-             confirmCallback: function(data){
-                     $('#edit-field-ge-section-und-0-value').next('.error').hide();
-                 $('#edit-field-ge-section-und-0-value').val(data.pathName.join('>'));
-                 if(isIE8 && $('#edit-field-ge-section-und-0-value').val()){
-                     $('#edit-field-ge-section-und-0-value').next('span').hide();
-                 }
+var cascadeDepartment = new Cascading.Desktop({
+   type: 'department',
+   data: 'dataDivision',
+   dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/division.js',
+   container: 'cascading-department-container',
+   onlyLast: true,
+   additionClass: 'cascading-department-container',
+   maxSelect: 1,
+   ieFallback: true,
+   panelNames: ['科室', '科室二级'],
+   confirmCallback: function(data){
+       $('#edit-field-ge-section-und-0-value').next('.error').hide();
+       $('#edit-field-ge-section-und-0-value').val(data.pathName.join('>'));
+       if(isIE8 && $('#edit-field-ge-section-und-0-value').val()){
+         $('#edit-field-ge-section-und-0-value').next('span').hide();
+      }
 
-             }
-         });
+   }
+});
 
-           $('#edit-field-ge-section-und-0-value').on('focus', function(e){
-             cascadeDepartment.open();
-             this.blur();
-         });
+$('#edit-field-ge-section-und-0-value').on('focus', function(e){
+ cascadeDepartment.open();
+ this.blur();
+});
 // 移动版科室
-           var cascadeDepartmentMobile = new Cascading.Mobile({
-             type: 'common',
-             data: 'dataDivision',
-             dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/division.js',
-             container: 'cascading-depart-mobile-container',
-             confirmCallback: function(data){
-               $('#edit-field-ge-section-und-0-value').val(data.pathName.join('>'));
-               $('#edit-field-ge-section-und-0-value').next('.error').hide();
+var cascadeDepartmentMobile = new Cascading.Mobile({
+  type: 'common',
+  data: 'dataDivision',
+  dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/division.js',
+  container: 'cascading-depart-mobile-container',
+  confirmCallback: function(data){
+    $('#edit-field-ge-section-und-0-value').val(data.pathName.join('>'));
+    $('#edit-field-ge-section-und-0-value').next('.error').hide();
 
-               if(isIE8 && $('#edit-field-ge-section-und-0-value').val()){
-                 $('#edit-field-ge-section-und-0-value').next('span').hide();
-               }
+    if(isIE8 && $('#edit-field-ge-section-und-0-value').val()){
+      $('#edit-field-ge-section-und-0-value').next('span').hide();
+    }
 
-             }
-           });
+  }
+});
 
-           $('#edit-field-ge-section-und-0-value').on('focus', function(e){
-             cascadeDepartmentMobile.open();
-             this.blur();
-           });
+$('#edit-field-ge-section-und-0-value').on('focus', function(e){
+ cascadeDepartmentMobile.open();
+ this.blur();
+});
 
 ```
 
 ```html      
               
-      //HTML内容
-      <div class="bottom-input-box">
-        <label for="">科室</label>
-        <input class="bottom-input" type="text" id="edit-field-ge-section-und-0-value" name="field_ge_section[und][0][value]">
-      </div>
+//HTML内容
+<div class="bottom-input-box">
+  <label for="">科室</label>
+  <input class="bottom-input" type="text" id="edit-field-ge-section-und-0-value" name="field_ge_section[und][0][value]">
+</div>
 
 ```
 ## <a name="职称选择控件"></a>9.职称选择控件
 
 ```js
 
-        // 桌面版职称
-           var cascadeTitle = new Cascading.Desktop({
-             type: 'common',
-             data: 'dataTitle',
-             dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/title.js',
-             container: 'cascading-title-container',
-             additionClass: 'test',
-             ieFallback: true,
-             confirmCallback: function(data){
-                $('[name="field_ge_jobtitle[und][0][value]"]').next('.error').hide();
-                 $('[name="field_ge_jobtitle[und][0][value]"]').val(data.pathName[0].join('>'));
-                 if(isIE8 && $('[name="field_ge_jobtitle[und][0][value]"]').val()){
-                     $('[name="field_ge_jobtitle[und][0][value]"]').next('span').hide();
-                 }
+// 桌面版职称
+   var cascadeTitle = new Cascading.Desktop({
+     type: 'common',
+     data: 'dataTitle',
+     dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/title.js',
+     container: 'cascading-title-container',
+     additionClass: 'test',
+     ieFallback: true,
+     confirmCallback: function(data){
+        $('[name="field_ge_jobtitle[und][0][value]"]').next('.error').hide();
+         $('[name="field_ge_jobtitle[und][0][value]"]').val(data.pathName[0].join('>'));
+         if(isIE8 && $('[name="field_ge_jobtitle[und][0][value]"]').val()){
+             $('[name="field_ge_jobtitle[und][0][value]"]').next('span').hide();
+         }
 
-             }
-         });
+     }
+ });
 
-           $('[name="field_ge_jobtitle[und][0][value]"]').on('focus', function(e){
-             cascadeTitle.open();
-             this.blur();
-         });
-    // 移动版职称
-           var cascadeTitleMobile = new Cascading.Mobile({
-               type: 'common',
-               data: 'dataTitle',
-               dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/title.js',
-               container: 'cascading-title-mobile-container',
-               additionClass: 'test',
-               ieFallback: true,
-               confirmCallback: function(data){
-                 $('[name="field_ge_jobtitle[und][0][value]"]').next('.error').hide();
-                 $('[name="field_ge_jobtitle[und][0][value]"]').val(data.pathName[0].join('>'));
-                 if(isIE8 && $('[name="field_ge_jobtitle[und][0][value]"]').val()){
-                     $('[name="field_ge_jobtitle[und][0][value]"]').next('span').hide();
-                 }
+$('[name="field_ge_jobtitle[und][0][value]"]').on('focus', function(e){
+ cascadeTitle.open();
+ this.blur();
+});
+// 移动版职称
+var cascadeTitleMobile = new Cascading.Mobile({
+   type: 'common',
+   data: 'dataTitle',
+   dataUrl: 'http://assets.dxycdn.com/core/widgets/cascading-list-v2/data/title.js',
+   container: 'cascading-title-mobile-container',
+   additionClass: 'test',
+   ieFallback: true,
+   confirmCallback: function(data){
+     $('[name="field_ge_jobtitle[und][0][value]"]').next('.error').hide();
+     $('[name="field_ge_jobtitle[und][0][value]"]').val(data.pathName[0].join('>'));
+     if(isIE8 && $('[name="field_ge_jobtitle[und][0][value]"]').val()){
+         $('[name="field_ge_jobtitle[und][0][value]"]').next('span').hide();
+     }
 
-             }
-         });
+ }
+});
 
-           $('[name="field_ge_jobtitle[und][0][value]"]').on('focus', function(e){
-             cascadeTitleMobile.open();
-             this.blur();
-         });
+$('[name="field_ge_jobtitle[und][0][value]"]').on('focus', function(e){
+ cascadeTitleMobile.open();
+ this.blur();
+});
 
 ```
 
 ```html
                     
-      //HTML内容
-       <div class="bottom-input-box">
-        <label for="">职称</label>
-        <input class="bottom-input" type="text" id="edit-field-ge-job-und-0-value" name="field_ge_jobtitle[und][0][value]">
-       </div>
+//HTML内容
+<div class="bottom-input-box">
+  <label for="">职称</label>
+  <input class="bottom-input" type="text" id="edit-field-ge-job-und-0-value" name="field_ge_jobtitle[und][0][value]">
+</div>
 
 ```
 
 ## <a name="判断是否移动端"></a>10.判断是否移动端
 ```js
 
-	var isMobile = /mobile|dxyapp/i.test(window.navigator.userAgent);
-	//使用
-	if(isMobile){
-		//do someting
-	}
+var isMobile = /mobile|dxyapp/i.test(window.navigator.userAgent);
+//使用
+if(isMobile){
+	//do someting
+}
 
 ```
 ## <a name="获取内页文章ID"></a>11.获取内页文章ID
@@ -761,7 +762,7 @@ jQuery.fn.scrollTo = function(speed){
     
 ```
 
-## <a name="滚动条插件"></a>20.滚动条插件
+## <a name="滚动条插件"></a>21.滚动条插件
 ```js
 
 var IScroll   = require('./lib/iscroll.js');
@@ -776,6 +777,21 @@ var IScroll   = require('./lib/iscroll.js');
         });
         }
       }
-    initActivityIntro();
+initActivityIntro();
+    
+```    
+
+## <a name="微信分享"></a>22.微信分享
+
+```js
+
+var dxy_wechat_share = require('dxy-wechat-share');
+
+window.wx_share = 'callback(具体地址看项目)';
+dxy_wechat_share({
+  title:'这是一个标题',
+  desc:'这是一个摘要第一行\n这是一个摘要第二行',
+  imgUrl:'这是一个分享图片地址'
+});
     
 ```    
