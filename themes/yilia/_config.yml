@@ -2,14 +2,14 @@
 menu:
   主页: /
   所有文章: /archives
-  # 随笔: /tags/随笔
+  简历: http://zanyuyu.js.org
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "https://github.com/zanseven007"
+  weibo: "http://www.weibo.com/zanyuyu"
+  # rss: "#"
+  zhihu: "https://www.zhihu.com/people/zan-yu-yu-35"
   #douban: "#"
   #mail: "#"
   #facebook: "#"
@@ -22,10 +22,10 @@ rss: /atom.xml
 # 是否需要修改 root 路径
 # 如果您的网站存放在子目录中，例如 http://yoursite.com/blog，
 # 请将您的 url 设为 http://yoursite.com/blog 并把 root 设为 /blog/。
-root: 
-
+root: /blog-page/
+language: zh-Hans
 # Content
-excerpt_link: more
+excerpt_link: 阅读全文
 fancybox: true
 mathjax: true
 
@@ -40,7 +40,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar:
+avatar: /img/cool.jpg
 #是否开启分享
 share_jia: true
 share_addthis: false
@@ -66,4 +66,4 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+aboutme: 海
