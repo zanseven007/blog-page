@@ -2,6 +2,9 @@
 title: 我的mac工具集
 date: 2016-09-09 16:02:56
 tags:
+    - 前端
+    - 个人
+    - mac
 ---
 
 # 我的mac工具集
@@ -13,13 +16,17 @@ tags:
 - 浏览器
  + Chrome
 - Chrome插件
- + LiveReload
- + Octotree
- + Momentum
- + AngularJS batarang
+ + LiveReload (在开发环境中配置livereload插件，配合浏览器插件可以自动刷新修改内容)
+ + Octotree （github和gitlab网站插件，可以显示Code tree）
+ + Momentum （可以让新开tab页变的很酷）
+ + AngularJS batarang 
  + Clear Cache
  + HTML5 Outliner
- + JSONView
+ + JSONView （格式化JSON数据）
+ + Avatars for Github （github动态列表显示头像）
+ + LastPass 
+ + Proxy SwitchySharp (代理切换)
+ + Egret Inspector （白鹭引擎游戏开发调试器）
  + 划词翻译
  + 广告终结者
  + 二维码（生成及识别）
@@ -36,6 +43,7 @@ tags:
 - 社交
  + QQ
  + 微信
+ + YoMail
 - 终端
  + iTerm+OhMyZsh
 - 压缩
@@ -60,6 +68,11 @@ tags:
  + FileZilla
 - 虚拟机
  + Parallels Desktop
+-
+- 游戏开发
+ + EgretEngine
+ + Egret Wing3
+- 
 - 效率
  + iStat
  + Reeder
@@ -68,22 +81,23 @@ tags:
  + Dash
  + Bartender 2
  + Go2Shell
+ + GoAgentX
  + Dr.cleaner
  + PopClip
  + 截图
  + 我的印象笔记
 - 
 
-##其他
-###安装homebrew
+## 其他
+### 安装homebrew
 ```code
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-###安装node
+### 安装node
 ```code
 brew install node
 ```
-###配置git，生成新的 ssh 公钥,复制~/.ssh/.pub到管理后台
+### 配置git，生成新的 ssh 公钥,复制~/.ssh/.pub到管理后台
 ```code
 ssh-keygen -t rsa -C "{your_email@email.com}"
 ```
