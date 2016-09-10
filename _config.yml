@@ -71,4 +71,4 @@ theme: yilia
 deploy:
   type: git
   repo: https://github.com/zanseven007/blog-page.git
-  branch: master
+  branch: gh-pages
