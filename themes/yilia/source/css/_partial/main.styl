@@ -285,6 +285,7 @@
 			margin-right: 9px;
 			border-radius: 3px;
 			padding: 5px;
+			display: block;
 			&:hover{
 				background: #88acdb;
 				color: #fff;
@@ -305,3 +306,40 @@
 #disqus_thread{
 	padding: 0 40px;
 }
+.rotate-avatar{
+	animation: rotateA 3s linear infinite;
+}
+@-webkit-keyframes rotateA {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateA {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

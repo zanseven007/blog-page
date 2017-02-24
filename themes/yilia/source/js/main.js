@@ -106,5 +106,13 @@ require([], function (){
 	if(yiliaConfig.open_in_new == true){
 		$(".article a[href]").attr("target", "_blank")
 	}
-	
+	$('.js-avatar').hover(function() {
+		$(this).addClass('rotate-avatar');
+	}, function() {
+		$(this).removeClass('rotate-avatar');
+	});
 });
+
+
+
+

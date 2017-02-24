@@ -27,7 +27,7 @@ tags:
  + LastPass 
  + Proxy SwitchySharp (代理切换)
  + Egret Inspector （白鹭引擎游戏开发调试器）
- + 划词翻译
+ + Google翻译 （google人工智能翻译，你懂的）
  + 广告终结者
  + 二维码（生成及识别）
  + 惠惠购物助手
@@ -64,26 +64,25 @@ tags:
 - 切图
  + Photoshop cc
  + Sketch
+ + cutterman(ps插件，快速切图)
 - ftp
  + FileZilla
 - 虚拟机
  + Parallels Desktop
--
 - 游戏开发
  + EgretEngine
  + Egret Wing3
-- 
 - 效率
- + iStat
- + Reeder
- + Paste
- + Divvy
- + Dash
- + Bartender 2
- + Go2Shell
- + GoAgentX
- + Dr.cleaner
- + PopClip
+ + iStat (在top显示网络上传下载速度，CPU内存使用情况等)
+ + Reeder（RSS阅读）
+ + Paste（保留剪贴板数据，可以随时调用之前的剪贴板内容）
+ + Divvy（屏幕分屏）
+ + Dash（程序猿文档）
+ + Bartender 2（top菜单栏图片整理）
+ + Go2Shell（在finder中直接唤起该目录下的终端）
+ + GoAgentX（墙墙墙）
+ + Dr.cleaner（清理Mac）
+ + PopClip 
  + 截图
  + 我的印象笔记
 - 
