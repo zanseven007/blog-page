@@ -38,19 +38,21 @@ tags:
  + uTorrent
 - 音乐
  + 网易云音乐
+ + QQ音乐
 - Markdown
  + Mou
 - 社交
  + QQ
  + 微信
- + YoMail
+ + Spark （由于 Yomail 老是闪退，所以换成了 Spark）
 - 终端
  + iTerm+OhMyZsh
 - 压缩
  + BetterZip
 - 编辑器
  + Sublime Text
-- 编辑器插件
+ + VS code （感觉比 sublime text 好用）
+- SB编辑器插件
  + DocBlockr
  + Emmet
  + jQuery
@@ -59,6 +61,16 @@ tags:
  + Babel
  + ColorPicker
  + WakaTime
+ + Beautify, HTML CSS Class Completion, HTML snippets, es6 snippets,jq snippets,Paste and indent,Sass,vscode-icons
+- VS编辑器插件
+ + HTML CSS Class Completion
+ + HTML snippets
+ + es6 snippets
+ + jQuery snippets
+ + Paste and indent
+ + Sass
+ + vscode-icons
+ + Beautify
 - 抓包
  + Charles
 - 切图
@@ -72,6 +84,7 @@ tags:
 - 游戏开发
  + EgretEngine
  + Egret Wing3
+ + Blender (3D 建模)
 - 效率
  + iStat (在top显示网络上传下载速度，CPU内存使用情况等)
  + Reeder（RSS阅读）
