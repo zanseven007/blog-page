@@ -189,6 +189,12 @@ a {
 .hide {
   display: none;
 }
+.dplayer {
+  width: 713px;
+}
+.dplayer-mobile {
+  width: 100%;
+}
 @media screen and (max-width: 1040px) {
   .inner {
     width: 100%;
