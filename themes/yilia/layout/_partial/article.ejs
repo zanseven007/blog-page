@@ -66,7 +66,7 @@
   }) %>
 <% } %>
 
-<% if (!index && post.comments && config.disqus_shortname){ %>
+<% if (!index && post.comments && !config.changyan){ %>
 <section id="comments">
   <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -83,3 +83,24 @@
   <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </section>
 <% } %>
+<% if (!index && post.comments && config.changyan){ %>
+  <section id="comments" style="padding: 0 30px;">
+<!--高速版，加载速度快，使用前需测试页面的兼容性-->
+<div id="SOHUCS" sid="<%= page.title %>"></div>
+<script>
+  (function(){
+    var appid = 'cysYEyE1q',
+    conf = '70c5ff76a5bcbd033799e79cd9520be3';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>    
+  </section>
+<% } %>  
+

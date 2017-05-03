@@ -53,6 +53,9 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
+changyan: true
+changyan_appid: cysYEyE1q
+changyan_appkey: 70c5ff76a5bcbd033799e79cd9520be3
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 
