@@ -16,6 +16,8 @@ tags:
 4. **[mkdir](#mkdir)**
 5. **[rm](#rm)**
 6. **[mv](#mv)**
+7. **[cp](#cp)**
+8. **[touch](#touch)**
 
 
 ## <a name="ls"></a>ls
@@ -133,6 +135,48 @@ mv 命令是move的缩写，可以用来移动文件或者将文件改名
   ```zsh
   mv test/*.txt test-other
   ```
+----
+
+## <a name="cp"></a>cp
+
+英译：（copy）
+
+格式：cp [选项] 源 目的
+
+mv 命令是move的缩写，可以用来移动文件或者将文件改名
+
+- `-R,-r` : recursive 递归复制目录及目录内所有内容;
+- `-l` : 链接文件而不复制
+
+**举例：**
+
+- 复制的 log.log 建立一个连结档 log-link.log,建立的是一个“快捷方式”
+  ```zsh
+  cp -s log.log log-link.log
+
+  //[root@localhost test]# ll
+  //lrwxrwxrwx 1 root root    7 10-28 15:18 log-link.log -> log.log
+  ```
+
+----
+
+## <a name="touch"></a>touch
+
+英译：（touch）
+
+格式：touch [选项] 文件
+
+touch命令不常用，一般在使用make的时候可能会用到，用来修改文件时间戳，或者新建一个不存在的文件。
+
+- `-c` : --no-create , 不建立任何文档
+- `-t` : 使用指定的日期时间，而非现在的时间  [[CC]YY]MMDDhhmm[.SS]  
+**举例：**
+
+- 创建一个时间为5月10号12点10分的文件
+  ```zsh
+  touch -t 05101210 log.log
+  ```
+
 ----
 
 ***未完待续***

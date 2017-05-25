@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://blogpage.js.org/2017/05/02/linux-collect/index.html">
 <meta property="og:site_name" content="赞鱼鱼的挖坑生活">
 <meta property="og:description" content="整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。">
-<meta property="og:updated_time" content="2017-05-03T09:42:17.000Z">
+<meta property="og:updated_time" content="2017-05-25T03:18:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 整理">
 <meta name="twitter:description" content="整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。">
@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/丁香园/" style="font-size: 12.5px;">丁香园</a> <a href="/tags/个人/" style="font-size: 17.5px;">个人</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/复制粘贴专用/" style="font-size: 15px;">复制粘贴专用</a> <a href="/tags/性能/" style="font-size: 10px;">性能</a> <a href="/tags/猫/" style="font-size: 10px;">猫</a> <a href="/tags/生活/" style="font-size: 12.5px;">生活</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a>
+						<a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/丁香园/" style="font-size: 12.5px;">丁香园</a> <a href="/tags/个人/" style="font-size: 17.5px;">个人</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/复制粘贴专用/" style="font-size: 15px;">复制粘贴专用</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/性能/" style="font-size: 10px;">性能</a> <a href="/tags/猫/" style="font-size: 10px;">猫</a> <a href="/tags/生活/" style="font-size: 12.5px;">生活</a> <a href="/tags/网络/" style="font-size: 10px;">网络</a>
 					</div>
 				</section>
 				
@@ -249,6 +249,8 @@
 <li><strong><a href="#mkdir">mkdir</a></strong></li>
 <li><strong><a href="#rm">rm</a></strong></li>
 <li><strong><a href="#mv">mv</a></strong></li>
+<li><strong><a href="#cp">cp</a></strong></li>
+<li><strong><a href="#touch">touch</a></strong></li>
 </ol>
 <h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a><a name="ls"></a>ls</h2><p>英译：（list）</p>
 <p>格式：ls [选项] [目录名]</p>
@@ -327,6 +329,31 @@
 </li>
 </ul>
 <hr>
+<h2 id="cp"><a href="#cp" class="headerlink" title="cp"></a><a name="cp"></a>cp</h2><p>英译：（copy）</p>
+<p>格式：cp [选项] 源 目的</p>
+<p>mv 命令是move的缩写，可以用来移动文件或者将文件改名</p>
+<ul>
+<li><code>-R,-r</code> : recursive 递归复制目录及目录内所有内容;</li>
+<li><code>-l</code> : 链接文件而不复制</li>
+</ul>
+<p><strong>举例：</strong></p>
+<ul>
+<li>复制的 log.log 建立一个连结档 log-link.log,建立的是一个“快捷方式”<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cp <span class="_">-s</span> log.log <span class="built_in">log</span>-link.log</div><div class="line"></div><div class="line">//[root@localhost <span class="built_in">test</span>]<span class="comment"># ll</span></div><div class="line">//lrwxrwxrwx 1 root root    7 10-28 15:18 <span class="built_in">log</span>-link.log -&gt; log.log</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h2 id="touch"><a href="#touch" class="headerlink" title="touch"></a><a name="touch"></a>touch</h2><p>英译：（touch）</p>
+<p>格式：touch [选项] 文件</p>
+<p>touch命令不常用，一般在使用make的时候可能会用到，用来修改文件时间戳，或者新建一个不存在的文件。</p>
+<ul>
+<li><code>-c</code> : –no-create , 不建立任何文档</li>
+<li><p><code>-t</code> : 使用指定的日期时间，而非现在的时间  [[CC]YY]MMDDhhmm[.SS]<br><strong>举例：</strong></p>
+</li>
+<li><p>创建一个时间为5月10号12点10分的文件</p>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">touch -t 05101210 log.log</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
 <p><strong><em>未完待续</em></strong></p>
 
       
@@ -337,11 +364,11 @@
     
 <nav id="article-nav">
   
-    <a href="/9999/12/31/cat/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/22/website-readable/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          一只蛋糕皮皮猫
+          老司机开车，网址大全
         
       </div>
     </a>
