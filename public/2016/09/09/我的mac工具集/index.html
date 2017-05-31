@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://blogpage.js.org/2016/09/09/我的mac工具集/index.html">
 <meta property="og:site_name" content="赞鱼鱼的挖坑生活">
 <meta property="og:description" content="我的mac工具集整理了我开发和日常使用环境中一些十分棒，能提升mac使用满足感的一些玩意儿">
-<meta property="og:updated_time" content="2017-03-21T07:57:31.000Z">
+<meta property="og:updated_time" content="2017-05-31T08:52:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的mac工具集">
 <meta name="twitter:description" content="我的mac工具集整理了我开发和日常使用环境中一些十分棒，能提升mac使用满足感的一些玩意儿">
@@ -214,8 +214,6 @@
   
   <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
     
       <header class="article-header">
         
@@ -261,7 +259,7 @@
 <li>JSONView （格式化JSON数据）</li>
 <li>Avatars for Github （github动态列表显示头像）</li>
 <li>LastPass </li>
-<li>Proxy SwitchySharp (代理切换)</li>
+<li>Proxy SwitchySharp (代理切换，PS：装了ShadowsocksX-NG后就弃用了)</li>
 <li>Egret Inspector （白鹭引擎游戏开发调试器）</li>
 <li>Google翻译 （google人工智能翻译，你懂的）</li>
 <li>广告终结者</li>
@@ -354,21 +352,23 @@
 </ul>
 </li>
 <li>效率<ul>
+<li>ShadowsocksX-NG (梯子)</li>
 <li>iStat (在top显示网络上传下载速度，CPU内存使用情况等)</li>
 <li>Reeder（RSS阅读）</li>
 <li>Paste（保留剪贴板数据，可以随时调用之前的剪贴板内容）</li>
 <li>Divvy（屏幕分屏）</li>
 <li>Dash（程序猿文档）</li>
+<li>gas mask（快速修改 host 文件）</li>
 <li>Bartender 2（top菜单栏图片整理）</li>
 <li>Go2Shell（在finder中直接唤起该目录下的终端）</li>
-<li>GoAgentX（墙墙墙）</li>
+<li>SourceTree (git 的 gui 工具，自从用了后，再也记不住 git 的命令了)</li>
+<li>GoAgentX（墙墙墙,PS：装了ShadowsocksX-NG后就弃用了）</li>
 <li>Dr.cleaner（清理Mac）</li>
 <li>PopClip </li>
 <li>截图</li>
 <li>我的印象笔记</li>
 </ul>
 </li>
-<li></li>
 </ul>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div></pre></td></tr></table></figure>
 <h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install node</div></pre></td></tr></table></figure>
@@ -440,12 +440,10 @@
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
 
 <script>
 	var yiliaConfig = {
-		fancybox: true,
+		fancybox: false,
 		mathjax: true,
 		animate: true,
 		isHome: false,

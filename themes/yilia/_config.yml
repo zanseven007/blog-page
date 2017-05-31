@@ -26,7 +26,7 @@ root:
 language: zh-Hans
 # Content
 excerpt_link: 阅读全文
-fancybox: true
+fancybox: false
 mathjax: true
 
 # 是否开启动画效果

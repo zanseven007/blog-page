@@ -18,6 +18,9 @@ tags:
 6. **[mv](#mv)**
 7. **[cp](#cp)**
 8. **[touch](#touch)**
+9. **[cat](#cat)**
+10. **[nl](#nl)**
+11. **[more](#more)**
 
 
 ## <a name="ls"></a>ls
@@ -175,6 +178,67 @@ touch命令不常用，一般在使用make的时候可能会用到，用来修�
 - 创建一个时间为5月10号12点10分的文件
   ```zsh
   touch -t 05101210 log.log
+  ```
+
+----
+
+## <a name="cat"></a>cat
+
+英译：（concatenate）
+
+格式：cat [选项] 文件
+
+cat命令的用途是连接文件或标准输入并打印。
+
+- `-n` : --number 输出行号
+
+**举例：**
+
+- 把 log2016.log 的文件内容加上行号后输入 log2017.log 这个文件里
+  ```zsh
+  cat -n log2016.log log2017.log 
+  ```
+
+----
+
+## <a name="nl"></a>nl
+
+英译：（number of line）
+
+格式：nl [选项] 文件
+
+nl命令的用途类似 `cat -n` 来查看文件的同时显示行数。
+
+----
+
+## <a name="more"></a>more
+
+英译：（more）
+
+格式：more [选项] 文件
+
+more命令和cat的功能一样都是查看文件里的内容，但有所不同的是more功能更加强大。
+
+- `+n` :  从第 n 行开始显示
+- `-n` :  每页显示行数
+- `+/pattern` :  在每个档案显示前搜寻该字串（pattern），然后从该字串开始显示  
+- `命令操作`
+  * `空格`：向下滚动一屏
+  * `b`：返回上一屏
+  * `v`: 调用 vim
+  * `q`: 退出
+
+
+**举例：**
+
+- 从第三行开始显示 log.log
+  ```zsh
+  more +3 log.log
+  ```
+
+- 从文件中查找第一个出现"day3"字符串的行
+  ```zsh
+  more +/day3 log.log
   ```
 
 ----

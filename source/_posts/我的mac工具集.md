@@ -25,7 +25,7 @@ tags:
  + JSONView （格式化JSON数据）
  + Avatars for Github （github动态列表显示头像）
  + LastPass 
- + Proxy SwitchySharp (代理切换)
+ + Proxy SwitchySharp (代理切换，PS：装了ShadowsocksX-NG后就弃用了)
  + Egret Inspector （白鹭引擎游戏开发调试器）
  + Google翻译 （google人工智能翻译，你懂的）
  + 广告终结者
@@ -86,19 +86,22 @@ tags:
  + Egret Wing3
  + Blender (3D 建模)
 - 效率
+ + ShadowsocksX-NG (梯子)
  + iStat (在top显示网络上传下载速度，CPU内存使用情况等)
  + Reeder（RSS阅读）
  + Paste（保留剪贴板数据，可以随时调用之前的剪贴板内容）
  + Divvy（屏幕分屏）
  + Dash（程序猿文档）
+ + gas mask（快速修改 host 文件）
  + Bartender 2（top菜单栏图片整理）
  + Go2Shell（在finder中直接唤起该目录下的终端）
- + GoAgentX（墙墙墙）
+ + SourceTree (git 的 gui 工具，自从用了后，再也记不住 git 的命令了)
+ + GoAgentX（墙墙墙,PS：装了ShadowsocksX-NG后就弃用了）
  + Dr.cleaner（清理Mac）
  + PopClip 
  + 截图
  + 我的印象笔记
-- 
+
 
 ## 其他
 ### 安装homebrew
