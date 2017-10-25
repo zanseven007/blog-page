@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="search" type="application/opensearchdescription+xml" href="http://7xljz9.com1.z0.glb.clouddn.com/search.xml?123" title="赞鱼鱼的博客">
   <meta name="description" content="整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。">
+<meta name="keywords" content="前端,个人,复制粘贴专用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 整理">
 <meta property="og:url" content="http://blogpage.js.org/2017/05/02/linux-collect/index.html">
 <meta property="og:site_name" content="赞鱼鱼的挖坑生活">
 <meta property="og:description" content="整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。">
-<meta property="og:updated_time" content="2017-05-26T03:35:44.000Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-10-25T01:54:51.627Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 整理">
 <meta name="twitter:description" content="整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。">
@@ -239,7 +241,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="/assets/js/DPlayer.min.js"> </script><p>整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。<br><a id="more"></a></p>
+        <p>整理了日常常用的 Linux 命令及英译，并不是所有的，只是我平时常用到的（oh my zsh 下）。<br><a id="more"></a></p>
 <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ol>
 <li><strong><a href="#ls">ls</a></strong></li>
 <li><strong><a href="#cd">cd</a></strong></li>
@@ -271,7 +273,7 @@
 <figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -F |grep /$</div></pre></td></tr></table></figure>
 </li>
 <li><p>计算当前目录下的文件数和目录数</p>
-<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ls <span class="_">-l</span> * |grep <span class="string">"^-"</span>|wc <span class="_">-l</span> ---文件个数  </div><div class="line">ls <span class="_">-l</span> * |grep <span class="string">"^d"</span>|wc <span class="_">-l</span>    ---目录个数</div></pre></td></tr></table></figure>
+<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ls -l * |grep <span class="string">"^-"</span>|wc -l ---文件个数  </div><div class="line">ls -l * |grep <span class="string">"^d"</span>|wc -l    ---目录个数</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
@@ -339,7 +341,7 @@
 </ul>
 <p><strong>举例：</strong></p>
 <ul>
-<li>复制的 log.log 建立一个连结档 log-link.log,建立的是一个“快捷方式”<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cp <span class="_">-s</span> log.log <span class="built_in">log</span>-link.log</div><div class="line"></div><div class="line">//[root@localhost <span class="built_in">test</span>]<span class="comment"># ll</span></div><div class="line">//lrwxrwxrwx 1 root root    7 10-28 15:18 <span class="built_in">log</span>-link.log -&gt; log.log</div></pre></td></tr></table></figure>
+<li>复制的 log.log 建立一个连结档 log-link.log,建立的是一个“快捷方式”<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cp -s log.log <span class="built_in">log</span>-link.log</div><div class="line"></div><div class="line">//[root@localhost <span class="built_in">test</span>]<span class="comment"># ll</span></div><div class="line">//lrwxrwxrwx 1 root root    7 10-28 15:18 <span class="built_in">log</span>-link.log -&gt; log.log</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
@@ -363,7 +365,7 @@
 </ul>
 <p><strong>举例：</strong></p>
 <ul>
-<li>把 log2016.log 的文件内容加上行号后输入 log2017.log 这个文件里<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -n <span class="built_in">log</span>2016.log <span class="built_in">log</span>2017.log</div></pre></td></tr></table></figure>
+<li>把 log2016.log 的文件内容加上行号后输入 log2017.log 这个文件里<figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat -n log2016.log log2017.log</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <hr>
